@@ -9,7 +9,7 @@
 - [TimeStreamDB](https://github.com/biomarkersParkinson/TimeStreamDB): Max's code for data formatting.
 - [pep-download](https://github.com/biomarkersParkinson/pep-download): Peter's data acquisition scripts.
 
-## Referecnes
+## References
 
 - [mcfly](https://github.com/NLeSC/mcfly):a deep-learning tool for time series classification created by the Netherlands eScience Center.
     - See [tutorial](https://blog.esciencecenter.nl/mcfly-an-easy-to-use-tool-for-deep-learning-for-time-series-classification-b2ee6b9419c2).
