@@ -13,7 +13,7 @@
 
 ## (Over)simplified workflow
 
-![](img/workflow.png)
+![](https://github.com/biomarkersParkinson/.github/blob/main/profile/img/workflow.png)
 
 ## References
 
