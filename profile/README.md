@@ -27,7 +27,7 @@ Although the inputs may differ in format, we expect them to contain time series 
 In order to get those time series in a neat, usable way, a parsing and preprocessing workflow is needed for each data format:
 
 ```mermaid
-graph LR;
+graph TD;
     Input[("Raw time series")] --> Parser --> Preprocessing --> Output[/Preprocessed time series/]
 ```
 
@@ -45,7 +45,7 @@ Our desired output is a table containing different scores indicating the progres
 Our proposed workflow to get there is the following:
 
 ```mermaid
-graph LR;
+graph TD;
     Preprocessed[/Preprocessed time series/] --> Gravity["Gravity measurement"] --> Gait["Gait detection"] --> Armswing["Armswing quantification"] --> b["Aggregation and filtering"] --> Scores[/Scores/]
 
     Gait --> Tremor["Tremor detection"] --> c["Aggregation and filtering"] --> Scores
