@@ -48,7 +48,8 @@ Our proposed workflow to get there is the following:
 graph TD;
     Preprocessed[/Preprocessed time series/] --> Gravity["Gravity measurement"] --> Gait["Gait detection"] --> Armswing["Armswing quantification"] --> b["Aggregation and filtering"] --> Scores[/Scores/]
 
-    Gait --> Tremor["Tremor detection"] --> c["Aggregation and filtering"] --> Scores
+    Gait .-> Tremor
+    Gravity --> ArmActivity["Arm activity"] --> Tremor["Tremor detection"] --> c["Aggregation and filtering"] --> Scores
     Preprocessed --> Tremor .-> TremorQuant["Tremor quantification \n (Optional)"] .-> c["Aggregation and filtering"]
 
     Preprocessed --> Filter["Filter based on quality"]
