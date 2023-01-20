@@ -46,16 +46,40 @@ Our proposed workflow to get there is the following:
 
 ```mermaid
 graph TD;
-    Preprocessed[/Preprocessed time series/] --> Gravity["Gravity measurement"] --> Gait["Gait detection"] --> Armswing["Armswing quantification"] --> b["Aggregation and filtering"] --> Scores[/Scores/]
+
+    subgraph gravity
+         Gravity["Gravity measurement"]
+    end
+
+    subgraph gait
+        Gait["Gait detection"]
+        Armswing["Armswing quantification"]
+        b["Aggregation and filtering"]
+    end
+
+    subgraph tremor
+        ArmActivity["Arm activity"]
+        Tremor["Tremor detection"]
+        c["Aggregation and filtering"]
+        TremorQuant["Tremor quantification \n (Optional)"]
+    end
+
+    subgraph PPG
+        Filter["Filter based on quality"]
+        HRstat["HR statistics"]
+        HRvar["HR variability"]
+        d["Aggregation and filtering"]
+    end
+
+    Preprocessed[/Preprocessed time series/] --> Gravity --> Gait --> Armswing --> b --> Scores[/Scores/]
 
     Gait .-> Tremor
-    Gravity --> ArmActivity["Arm activity"] --> Tremor["Tremor detection"] --> c["Aggregation and filtering"] --> Scores
-    Preprocessed --> Tremor .-> TremorQuant["Tremor quantification \n (Optional)"] .-> c["Aggregation and filtering"]
+    Gravity --> ArmActivity--> Tremor --> c --> Scores
+    Tremor .-> TremorQuant .-> c
 
-    Preprocessed --> Filter["Filter based on quality"]
-    Filter --> HRstat["HR statistics"] --> d["Aggregation and filtering"] --> Scores
-    Filter --> HRvar["HR variability"] --> d["Aggregation and filtering"]
-
+    Preprocessed --> Filter
+    Filter --> HRstat --> d --> Scores
+    Filter --> HRvar --> d
 
 ```
 
