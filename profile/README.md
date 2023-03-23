@@ -28,7 +28,7 @@ In order to get those time series in a neat, usable way, a parsing and preproces
 
 ```mermaid
 graph TD;
-    Input[("Raw time series")] --> Parser --> Preprocessing --> Output[/Preprocessed time series/]
+    Input[("Raw data")] --> Parser --> Output[/Time series/]
 ```
 
 ### Desired output
@@ -71,7 +71,7 @@ graph TD;
         d["Aggregation and filtering"]
     end
 
-    Preprocessed[/Preprocessed time series/] --> Gravity --> Gait --> Armswing --> b --> Scores[/Scores/]
+    Preprocessed[/Time series/] --> Gravity --> Gait --> Armswing --> b --> Scores[/Scores/]
 
     Gait .-> Tremor
     Gravity --> ArmActivity--> Tremor --> c --> Scores
