@@ -5,11 +5,12 @@
 - Project documentation
     - [docs](https://github.com/biomarkersParkinson/docs): for general documentation.
 - Data handling (input, output, conversion, decryption, ...):
-    - [parkio](https://github.com/biomarkersParkinson/parkio): input/check/output of time series.
+    - [tsdf](https://github.com/biomarkersParkinson/tsdf): official Python package for managing tsdf format.
     - [ppp](https://github.com/biomarkersParkinson/ppp): loading utilities for the _ppp_ dataset.
     - [gait](https://github.com/biomarkersParkinson/gait): loading utilities for the _pdathome_ dataset.
     - [TimeStreamDB](https://github.com/biomarkersParkinson/TimeStreamDB): Max's code for data formatting.
     - [pep-download](https://github.com/biomarkersParkinson/pep-download): Peter's data acquisition scripts.
+    - [parkio](https://github.com/biomarkersParkinson/parkio): input/check/output of time series.
 
 ## Architecture
 
