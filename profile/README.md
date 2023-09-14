@@ -48,40 +48,47 @@ Our proposed workflow to get there is the following:
 ```mermaid
 graph TD;
 
+    subgraph specific context of use
+         Input["Raw acc, gyr & ppg time series "]
+    end
+
     subgraph gravity
-         Gravity["Gravity measurement"]
+         Gravity["Gravity filtering"]
     end
 
     subgraph gait
         Gait["Gait detection"]
-        Armswing["Armswing quantification"]
-        b["Aggregation and filtering"]
+        Cleangait["Detection of other activities"]
+        Armswing["Arm swing quantification"]
+        b["Weekly aggregation"]
     end
 
     subgraph tremor
         ArmActivity["Arm activity"]
         Tremor["Tremor detection"]
-        c["Aggregation and filtering"]
-        TremorQuant["Tremor quantification \n (Optional)"]
+        c["Weekly aggregation"]
+        TremorQuant["Tremor quantification"]
     end
 
-    subgraph PPG
-        Filter["Filter based on quality"]
-        HRstat["HR statistics"]
-        HRvar["HR variability"]
-        d["Aggregation and filtering"]
+    subgraph heart-rate variability
+        Filter["Artefact detection"]
+        HRstat["Global HR statistics"]
+        HRvarex["HR exercise variability"]
+        HRvarnight["Nighttime HR variability"]
+        d["Weekly aggregation"]
     end
 
-    Preprocessed[/Time series/] --> Gravity --> Gait --> Armswing --> b --> Scores[/Scores/]
+    Input --> Gravity --> Gait --> Cleangait --> Armswing --> b --> Scores[/Digital biomarkers/]
 
     Gait .-> Tremor
     Gravity --> ArmActivity--> Tremor --> c --> Scores
-    Tremor .-> TremorQuant .-> c
+    Tremor --> TremorQuant --> c
 
-    Preprocessed --> Filter
+    Input --> Filter
+    Gait .-> HRvarex
+    Filter --> HRvarex --> d
     Filter --> HRstat --> d --> Scores
-    Filter --> HRvar --> d
-
+    Filter --> HRvarnight --> d
 ```
 
 ## References
