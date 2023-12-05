@@ -34,7 +34,7 @@ graph TD;
 
 ### Desired output
 
-Our desired output is a table containing different scores indicating the progression of Parkinson. Notice that we aggregate them at a much longer scale than the devices' resolutions. The intuitive reason for doing this is that in order to witness significant progresses in Parkinson's disease we need to wait weeks instead of miliseconds.
+Our desired output is a table containing different scores indicating the progression of Parkinson's. Notice that we aggregate them at a much longer scale than the devices' resolutions. The intuitive reason for doing this is that to witness significant progress in Parkinson's disease we need to wait weeks instead of milliseconds.
 
 | Week | Gait score | Tremor score | ... |
 |------|------------|--------------|-----|
@@ -44,6 +44,10 @@ Our desired output is a table containing different scores indicating the progres
 | 4    | `<float>`  | `<float>`    | ... |
 
 Our proposed workflow to get there is the following:
+
+![Pipelines](https://raw.githubusercontent.com/biomarkersParkinson/docs/main/architecture/pipeline-architecture.drawio.png?token=GHSAT0AAAAAACD6IZQHOE7VHC5XI3MPHBVSZLPJNAQ)
+
+See an alternative illustration:
 
 ```mermaid
 graph TD;
