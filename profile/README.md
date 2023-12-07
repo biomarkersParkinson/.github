@@ -45,7 +45,7 @@ Our desired output is a table containing different scores indicating the progres
 
 Our proposed workflow to get there is the following:
 
-![Pipelines](https://raw.githubusercontent.com/biomarkersParkinson/docs/main/architecture/pipeline-architecture.drawio.png?token=GHSAT0AAAAAACD6IZQHOE7VHC5XI3MPHBVSZLPJNAQ)
+![Pipelines](https://github.com/biomarkersParkinson/docs/blob/main/architecture/pipeline-architecture.drawio.png)
 
 See an alternative illustration:
 
