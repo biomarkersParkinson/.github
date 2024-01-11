@@ -2,6 +2,8 @@
 
 ## Repositories
 
+- Toolbox
+    - [dbpd toolbox](https://github.com/biomarkersParkinson/dbpd-toolbox): the main toolbox for data processing outputing scores indicating the progression of Parkinson's
 - Project documentation
     - [docs](https://github.com/biomarkersParkinson/docs): for general documentation.
 - Data handling (input, output, conversion, decryption, ...):
@@ -25,7 +27,7 @@ Although the inputs may differ in format, we expect them to contain time series 
 | 0.2   | `<float>` | `<float>` | ... |
 | 0.3   | `<float>` | `<float>` | ... |
 
-In order to get those time series in a neat, usable way, a parsing and preprocessing workflow is needed for each data format:
+To get those time series in a neat, usable way, a parsing and preprocessing workflow is needed for each data format:
 
 ```mermaid
 graph TD;
