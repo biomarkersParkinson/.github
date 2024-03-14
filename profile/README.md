@@ -9,7 +9,7 @@
 - Data handling (input, output, conversion, decryption, ...):
     - [tsdf](https://github.com/biomarkersParkinson/tsdf): official Python package for managing tsdf format.
     - [ppp](https://github.com/biomarkersParkinson/ppp): loading utilities for the _ppp_ dataset.
-    - [gait](https://github.com/biomarkersParkinson/gait): loading utilities for the _pdathome_ dataset.
+    - [gait](https://github.com/biomarkersParkinson/gait): pipeline and example notebooks of both the _pdathome_ dataset and the _ppp_ dataset of the gait domain.
     - [TimeStreamDB](https://github.com/biomarkersParkinson/TimeStreamDB): Max's code for data formatting.
     - [pep-download](https://github.com/biomarkersParkinson/pep-download): Peter's data acquisition scripts.
     - [parkio](https://github.com/biomarkersParkinson/parkio): input/check/output of time series.
