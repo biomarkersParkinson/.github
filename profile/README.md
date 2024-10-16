@@ -3,7 +3,7 @@
 ## Repositories
 
 - Toolbox
-    - [dbpd toolbox](https://github.com/biomarkersParkinson/dbpd-toolbox): the main toolbox for data processing outputing scores indicating the progression of Parkinson's
+    - [paradigma](https://github.com/biomarkersParkinson/paradigma): the main toolbox for data processing outputing scores indicating the progression of Parkinson's
 - Project documentation
     - [docs](https://github.com/biomarkersParkinson/docs): for general documentation.
 - Research domains
